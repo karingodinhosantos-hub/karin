@@ -25,6 +25,9 @@
             width: 80px;
             height: 80px;
             }
+            .artigo-autor {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -37,10 +40,21 @@
             alt="Cenario classico do jogo Minecraft mostrando o personagem Steve em uma colina, observando um rio, uma floresta e uma pequena vila ao fundo.">
             <div>
                 <h2>Meu primeiro post</h2>
-                <p>Por: Karin</p>
+                <p class="artigo-autor">Por: Karin</p>
                 <p>Boas vindas a meu blog! aqui vou te ansinar voce a jogar um jogo chamado minecreft</p>
+                <button>⛏️ <samp>0</samp></button>
             </div>
         </main>
 
      </body>
+     <script>
+        const botao = document.querySelector("button");
+        botao.addEventListener("click", botaoClicado);
+
+        Function botaoClicado(){
+            console.log("fui clicado");
+            let texto = botao.querySelector("span")
+            Text.textContent++;
+        }
+     </script>
 </html>
