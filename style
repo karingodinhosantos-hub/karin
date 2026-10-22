@@ -6,7 +6,11 @@
     --cor-contraste: #f3eef7;
     --cor-botao: #f9f9f9;
 
-    --fonte-texto: 
+    --fonte-texto: 'Segoe UI', sans-serif;
+}
+
+*{
+    transition: background-color 0.8s ease;
 }
 
 .tema-escuro{
@@ -24,16 +28,19 @@
 
 .tema-escuro p {
     color: var(--cor-texto);
-
 }
 
 .tema-escuro header p {
     color: var(--cor-contraste);
 }
 
+.tema-escuro .btn-tema-escuro{
+    beckground-color: var(--cor-secundaria);
+}
+
 body {
     max-width: 100vw;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--fonte-texto);
     
 }
 
@@ -57,8 +64,7 @@ main {
 
 article{
     display: flex;
-
-    border: 1px solid var(--cor-primaria);  
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 
     margin: 16px;
     gap: 16px;
@@ -79,4 +85,14 @@ img{
 
 .artigo-autor{
     font-weight: bold;
+}
+
+.btn-tema-escuro{
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 32px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
 }
